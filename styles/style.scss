@@ -1,0 +1,219 @@
+/* Variables */
+
+$primaryColor: #0035F2;
+$primaryHover: #1439BE;
+$whiteHover: #CCD0FC;
+
+$tabletSize: 768px;
+$phoneSize: 480px;
+
+@mixin tablet {
+    @media (max-width: #{$tabletSize}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phoneSize}) {
+        @content;
+    }
+}
+
+/* Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+
+    @include phone {
+        font-size: 9px;
+    }
+}
+
+body, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1224px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+.header {
+    height: 72px;
+
+    @include tablet {
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+.header-container {
+    height: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 1.8rem;
+
+    @include tablet {
+        margin: 20px auto;
+    }
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin: 0 12px;
+    }
+
+    .nav-link {
+        font-size: 1.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: $primaryColor;
+            transition: width 0.2s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.nav-button {
+    background-color: $primaryColor;
+    color: white;
+    border: none;
+    padding: 4px 16px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-left: 12px;
+
+    @include tablet {
+        margin-left: 0;
+        margin: 20px 0;
+    }
+
+    &:hover {
+        background-color: $primaryHover;
+        transition: 0.2s;
+    }
+}
+
+/* Hero */
+
+.hero {
+    background-color: $primaryColor;
+    position: relative;
+}
+
+.background-box {
+    position: absolute;
+    height: 30%;
+    background-color: rgb(21, 72, 255);
+    width: 70%;
+
+    @include tablet {
+        display: none;
+    }
+
+    &.left {
+        top: 5rem;
+        left: 0;
+        border-radius: 0 80px 80px 0;
+    }
+
+    &.right {
+        bottom: 5rem;
+        right: 0;
+        border-radius: 80px 0 0 80px;
+    }
+}
+
+.hero-container {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    padding: 10rem;
+
+    @include tablet {
+        padding: 6rem 1rem;
+    }
+
+    h4 {
+        color: white;
+        font-size: 4.6rem;
+
+        @include tablet {
+            font-size: 3.2rem;
+        }
+    }
+
+    p {
+        color: white;
+        font-size: 2rem;
+        margin-top: 1rem;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
+    }
+
+    .hero-button-container {
+        margin-top: 7rem;
+        display: flex;
+        justify-content: center;
+
+        @include phone {
+            flex-direction: column;
+        }
+
+        .hero-button {
+            width: 160px;
+            height: 40px;
+            margin: 0 1.4rem ;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            @include phone {
+                margin: 1.4rem 0;
+                width: 90%;
+            }
+
+            &:hover {
+                background-color: rgb(204, 208, 252);
+                transition: 0.2s;
+            }
+        }
+    }
+}
