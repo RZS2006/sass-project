@@ -279,3 +279,56 @@ a {
         font-size: 1.3rem;
     }
 }
+
+/* Footer */
+
+.footer {
+    background-color: #ECECEC;
+}
+
+.footer-top {
+    display: flex;
+    padding: 3rem 0;
+    border-bottom: rgb(134, 134, 134) 1px solid;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    list-style: none;
+    height: inherit;
+    align-items: center;
+
+    li {
+        margin-right: 24px;
+
+        a {
+            font-size: 1.4rem;
+            color: rgb(68, 68, 68);
+
+            &:hover {
+                color: black;
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+.footer-right {
+    margin-left: auto;
+
+    li {
+        margin-right: 0;
+        margin-left: 12px;
+
+        a {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    color: rgb(88, 88, 88);
+}
