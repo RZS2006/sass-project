@@ -317,6 +317,12 @@ a {
   border-bottom: #868686 1px solid;
 }
 
+@media (max-width: 768px) {
+  .footer-top {
+    display: block;
+  }
+}
+
 .footer-left, .footer-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -330,6 +336,12 @@ a {
 
 .footer-left li, .footer-right li {
   margin-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .footer-left li, .footer-right li {
+    margin-top: 1em;
+  }
 }
 
 .footer-left li a, .footer-right li a {
@@ -350,6 +362,13 @@ a {
 .footer-right li {
   margin-right: 0;
   margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer-right li {
+    margin-left: 0;
+    margin-right: 12px;
+  }
 }
 
 .footer-right li a {

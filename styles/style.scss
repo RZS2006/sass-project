@@ -290,6 +290,11 @@ a {
     display: flex;
     padding: 3rem 0;
     border-bottom: rgb(134, 134, 134) 1px solid;
+
+    @include tablet {
+        display: block;
+    }
+
 }
 
 .footer-left, .footer-right {
@@ -300,6 +305,11 @@ a {
 
     li {
         margin-right: 24px;
+
+        @include tablet {
+            margin-top: 1em;;
+        }
+    
 
         a {
             font-size: 1.4rem;
@@ -319,6 +329,12 @@ a {
     li {
         margin-right: 0;
         margin-left: 12px;
+
+        @include tablet {
+            margin-left: 0;
+            margin-right: 12px;
+        }
+    
 
         a {
             font-size: 1.2rem;
