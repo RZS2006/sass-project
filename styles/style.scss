@@ -37,7 +37,7 @@ body, button {
 }
 
 .container {
-    width: 90%;
+    width: 85%;
     max-width: 1224px;
     height: inherit;
     margin: 0 auto;
@@ -160,7 +160,7 @@ a {
     position: relative;
     z-index: 20;
     text-align: center;
-    padding: 10rem;
+    padding: 8rem;
 
     @include tablet {
         padding: 6rem 1rem;
@@ -215,5 +215,67 @@ a {
                 transition: 0.2s;
             }
         }
+    }
+}
+
+/* Sections */
+
+.section {
+    margin: 6rem 0;
+}
+
+.section-title {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        font-size: 2.6rem;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 90px;
+        height: 4px;
+        background-color: $primaryColor;
+    }
+}
+
+/* Description */
+
+.description-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+}
+
+.description-item {
+    background-color: white;
+    padding: 3rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background-color: $primaryColor;
+    }
+
+    h6 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
     }
 }
