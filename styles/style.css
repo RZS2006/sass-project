@@ -30,6 +30,11 @@ a {
   color: inherit;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 /* Header */
 .header {
   height: 72px;
@@ -66,12 +71,12 @@ a {
 
 .logo {
   margin-right: auto;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 768px) {
   .logo {
-    margin: 20px auto;
+    margin: 30px auto;
   }
 }
 
@@ -107,7 +112,6 @@ a {
 .nav-button {
   background-color: #0035F2;
   color: white;
-  border: none;
   padding: 4px 16px;
   font-size: 1.4rem;
   font-weight: 600;
@@ -118,12 +122,12 @@ a {
 @media (max-width: 768px) {
   .nav-button {
     margin-left: 0;
-    margin: 20px 0;
+    margin: 20px auto;
   }
 }
 
 .nav-button:hover {
-  background-color: #1439BE;
+  background-color: #1838a8;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -137,7 +141,7 @@ a {
 .background-box {
   position: absolute;
   height: 30%;
-  background-color: #1548ff;
+  background-color: #1648ff;
   width: 70%;
 }
 
@@ -179,7 +183,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-container h4 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 }
 
@@ -191,7 +195,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-container p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -217,10 +221,8 @@ a {
 .hero-container .hero-button-container .hero-button {
   width: 160px;
   height: 40px;
-  margin: 0 1.4rem;
-  cursor: pointer;
+  margin: 1.4rem;
   background-color: white;
-  border: none;
   border-radius: 20px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -228,32 +230,30 @@ a {
 
 @media (max-width: 480px) {
   .hero-container .hero-button-container .hero-button {
-    margin: 1.4rem 0;
     width: 90%;
   }
 }
 
 .hero-container .hero-button-container .hero-button:hover {
-  background-color: #ccd0fc;
+  background-color: #CCD0FC;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 /* Sections */
 .section {
-  margin: 6rem 0;
+  margin: 8rem 0;
 }
 
 .section-title {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -269,15 +269,15 @@ a {
 .description-item-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-items: center;
 }
 
 .description-item {
   background-color: white;
-  padding: 3rem;
-  margin: 1rem;
+  padding: 3.2rem;
+  margin: 1.5rem 1rem;
   text-align: center;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
@@ -290,39 +290,38 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 4px;
   background-color: #0035F2;
 }
 
 .description-item h6 {
   text-transform: uppercase;
   font-size: 2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .description-item p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 /* Pricing */
 .pricing-item-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .pricing-item {
   background-color: white;
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   text-align: center;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-item .pricing-item-header {
-  width: 100%;
-  padding: 2rem;
+  padding: 2.2rem;
   text-align: center;
 }
 
@@ -331,62 +330,63 @@ a {
   text-transform: uppercase;
 }
 
-.pricing-item h6 {
+.pricing-item .pricing-item-content {
+  padding: 4rem 3rem;
+}
+
+.pricing-item .pricing-item-content h6 {
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 2rem;
   font-size: 1.6rem;
 }
 
-.pricing-item .price {
+.pricing-item .pricing-item-content .price {
   margin-top: 1rem;
 }
 
-.pricing-item .price .price-number {
-  font-size: 4rem;
+.pricing-item .pricing-item-content .price .price-number {
+  font-size: 4.4rem;
   font-weight: 600;
 }
 
-.pricing-item .price .price-symbol {
+.pricing-item .pricing-item-content .price .price-symbol {
   font-size: 2.4rem;
 }
 
-.pricing-item .price .price-month {
-  font-size: 1.6rem;
+.pricing-item .pricing-item-content .price .price-month {
+  font-size: 1.4rem;
 }
 
-.pricing-item p {
+.pricing-item .pricing-item-content p {
   margin-top: 1rem;
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-.pricing-item .pricing-button {
-  border: none;
+.pricing-item .pricing-item-content .pricing-button {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 2rem 0;
+  margin-top: 3rem;
   padding: 8px 28px;
   border-radius: 40px;
-  cursor: pointer;
 }
 
 @media (max-width: 480px) {
-  .pricing-item .pricing-button {
-    width: 80%;
+  .pricing-item .pricing-item-content .pricing-button {
+    width: 90%;
   }
 }
 
 .pricing-item-normal .pricing-item-header {
-  background-color: #dbdbdb;
+  background-color: #DBDBDB;
 }
 
 .pricing-item-normal .pricing-button {
-  background-color: #dbdbdb;
+  background-color: #DBDBDB;
 }
 
 .pricing-item-normal .pricing-button:hover {
-  background-color: #adadad;
+  background-color: #ADADAD;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -405,7 +405,7 @@ a {
 }
 
 .pricing-item-main .pricing-button:hover {
-  background-color: #1439BE;
+  background-color: #1838a8;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -414,24 +414,28 @@ a {
 .sponsors-item-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .sponsors-item {
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   height: 200px;
   position: relative;
 }
 
 .sponsors-item:hover > .sponsors-item-front {
-  -webkit-transform: perspective(800px) rotateY(-180deg);
-          transform: perspective(800px) rotateY(-180deg);
+  -webkit-transform: perspective(1000px) rotateY(-180deg);
+          transform: perspective(1000px) rotateY(-180deg);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .sponsors-item:hover > .sponsors-item-back {
-  -webkit-transform: perspective(800px) rotateY(0deg);
-          transform: perspective(800px) rotateY(0deg);
+  -webkit-transform: perspective(1000px) rotateY(0deg);
+          transform: perspective(1000px) rotateY(0deg);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .sponsors-item-front, .sponsors-item-back {
@@ -440,10 +444,10 @@ a {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: absolute;
-  -webkit-transition: -webkit-transform 0.5s linear;
-  transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.6s 2s;
+  transition: -webkit-transform 0.6s 2s;
+  transition: transform 0.6s 2s;
+  transition: transform 0.6s 2s, -webkit-transform 0.6s 2s;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   background-color: white;
@@ -451,8 +455,8 @@ a {
 }
 
 .sponsors-item-front {
-  -webkit-transform: perspective(800px) rotateY(0deg);
-          transform: perspective(800px) rotateY(0deg);
+  -webkit-transform: perspective(1000px) rotateY(0deg);
+          transform: perspective(1000px) rotateY(0deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,8 +475,8 @@ a {
 }
 
 .sponsors-item-back {
-  -webkit-transform: perspective(800px) rotateY(180deg);
-          transform: perspective(800px) rotateY(180deg);
+  -webkit-transform: perspective(1000px) rotateY(180deg);
+          transform: perspective(1000px) rotateY(180deg);
 }
 
 .sponsors-item-back blockquote {
@@ -480,7 +484,7 @@ a {
 }
 
 .sponsors-item-back cite {
-  margin-top: 20px;
+  margin-top: 2rem;
   padding-left: 25px;
   font-size: 1.4rem;
   color: #0035F2;
@@ -536,7 +540,7 @@ a {
 
 @media (max-width: 768px) {
   .footer-left li, .footer-right li {
-    margin-top: 1em;
+    margin-top: 1.4em;
   }
 }
 

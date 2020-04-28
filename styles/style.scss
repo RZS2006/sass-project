@@ -1,8 +1,15 @@
 /* Variables */
 
 $primaryColor: #0035F2;
-$primaryHover: #1439BE;
+$primaryHover: rgb(24, 56, 168);
+$greyColor: #DBDBDB;
+$greyHover: #ADADAD;
 $whiteHover: #CCD0FC;
+
+$fwLight: 400;
+$fwBold: 600;
+
+$boxShadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 
 $tabletSize: 768px;
 $phoneSize: 480px;
@@ -48,6 +55,11 @@ a {
     color: inherit;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
 /* Header */
 
 .header {
@@ -72,10 +84,10 @@ a {
 
 .logo {
     margin-right: auto;
-    font-size: 1.8rem;
+    font-size: 2rem;
 
     @include tablet {
-        margin: 20px auto;
+        margin: 30px auto;
     }
 }
 
@@ -108,16 +120,15 @@ a {
 .nav-button {
     background-color: $primaryColor;
     color: white;
-    border: none;
     padding: 4px 16px;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: $fwBold;
     border-radius: 20px;
     margin-left: 12px;
 
     @include tablet {
         margin-left: 0;
-        margin: 20px 0;
+        margin: 20px auto;
     }
 
     &:hover {
@@ -136,7 +147,7 @@ a {
 .background-box {
     position: absolute;
     height: 30%;
-    background-color: rgb(21, 72, 255);
+    background-color: rgb(22, 72, 255);
     width: 70%;
 
     @include tablet {
@@ -171,7 +182,7 @@ a {
         font-size: 4.6rem;
 
         @include tablet {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
         }
     }
 
@@ -181,7 +192,7 @@ a {
         margin-top: 1rem;
 
         @include tablet {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
         }
     }
 
@@ -197,21 +208,18 @@ a {
         .hero-button {
             width: 160px;
             height: 40px;
-            margin: 0 1.4rem ;
-            cursor: pointer;
+            margin: 1.4rem;
             background-color: white;
-            border: none;
             border-radius: 20px;
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: $fwBold;
 
             @include phone {
-                margin: 1.4rem 0;
                 width: 90%;
             }
 
             &:hover {
-                background-color: rgb(204, 208, 252);
+                background-color: $whiteHover;
                 transition: 0.2s;
             }
         }
@@ -221,17 +229,16 @@ a {
 /* Sections */
 
 .section {
-    margin: 6rem 0;
+    margin: 8rem 0;
 }
 
 .section-title {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
 
     @include tablet {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
 
     &::before {
@@ -247,16 +254,16 @@ a {
 
 .description-item-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-items: center;
 }
 
 .description-item {
     background-color: white;
-    padding: 3rem;
-    margin: 1rem;
+    padding: 3.2rem;
+    margin: 1.5rem 1rem;
     text-align: center;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: $boxShadow;
     position: relative;
     
     &::before {
@@ -265,18 +272,18 @@ a {
         top: 0;
         left: 0;
         width: 100%;
-        height: 6px;
+        height: 4px;
         background-color: $primaryColor;
     }
 
     h6 {
         text-transform: uppercase;
         font-size: 2rem;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.4rem;
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -284,18 +291,17 @@ a {
 
 .pricing-item-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .pricing-item {
     background-color: white;
-    margin: 1rem;
+    margin: 1.5rem 1rem;
     text-align: center;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 
     .pricing-item-header {
-        width: 100%;
-        padding: 2rem;
+        padding: 2.2rem;
         text-align: center;
 
         h4 {
@@ -304,61 +310,62 @@ a {
         }
     }
 
-    h6 {
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-top: 2rem;
-        font-size: 1.6rem;
-    }
+    .pricing-item-content {
+        padding: 4rem 3rem;
 
-    .price {
-        margin-top: 1rem;
-
-        .price-number {
-            font-size: 4rem;
-            font-weight: 600;
-        }
-
-        .price-symbol {
-            font-size: 2.4rem;
-        }
-
-        .price-month {
+        h6 {
+            font-weight: $fwLight;
+            text-transform: uppercase;
             font-size: 1.6rem;
         }
-    }
-
-    p {
-        margin-top: 1rem;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-
-    .pricing-button {
-        border: none;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 2rem 0;
-        padding: 8px 28px;
-        border-radius: 40px;
-        cursor: pointer;
-
-        @include phone {
-            width: 80%;
+    
+        .price {
+            margin-top: 1rem;
+    
+            .price-number {
+                font-size: 4.4rem;
+                font-weight: $fwBold;
+            }
+    
+            .price-symbol {
+                font-size: 2.4rem;
+            }
+    
+            .price-month {
+                font-size: 1.4rem;
+            }
+        }
+    
+        p {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    
+        .pricing-button {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            padding: 8px 28px;
+            border-radius: 40px;
+    
+            @include phone {
+                width: 90%;
+            }
         }
     }
 }
 
 .pricing-item-normal {
     .pricing-item-header {
-        background-color: rgb(219, 219, 219);
+        background-color: $greyColor;
     }
 
     .pricing-button {
-        background-color: rgb(219, 219, 219);
+        background-color: $greyColor;
 
         &:hover {
-            background-color: rgb(173, 173, 173);
+            background-color: $greyHover;
             transition: 0.2s;
         }
     }
@@ -388,20 +395,22 @@ a {
 
 .sponsors-item-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .sponsors-item {
-    margin: 1rem;
+    margin: 1.5rem 1rem;
     height: 200px;
     position: relative;
 
     &:hover > .sponsors-item-front {
-        transform: perspective(800px) rotateY(-180deg);
+        transform: perspective(1000px) rotateY(-180deg);
+        transition: 0.6s;
     }
 
     &:hover > .sponsors-item-back {
-        transform: perspective(800px) rotateY(0deg);
+        transform: perspective(1000px) rotateY(0deg);
+        transition: 0.6s;
     }
 }
 
@@ -410,14 +419,14 @@ a {
     height: 100%;
     backface-visibility: hidden;
     position: absolute;
-    transition: transform 0.5s linear;
+    transition: transform 0.6s 2s;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
     background-color: white;
     padding: 2rem;
 }
 
 .sponsors-item-front {
-    transform: perspective(800px) rotateY(0deg);
+    transform: perspective(1000px) rotateY(0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,18 +439,18 @@ a {
 }
 
 .sponsors-item-back {
-    transform: perspective(800px) rotateY(180deg);
+    transform: perspective(1000px) rotateY(180deg);
 
     blockquote {
         font-size: 1.6rem;
     }
 
     cite {
-        margin-top: 20px;
+        margin-top: 2rem;
         padding-left: 25px;
         font-size: 1.4rem;
         color: $primaryColor;
-        font-weight: 600;
+        font-weight: $fwBold;
         display: block;
         position: relative;
         font-style: normal;
@@ -485,7 +494,7 @@ a {
         margin-right: 24px;
 
         @include tablet {
-            margin-top: 1em;;
+            margin-top: 1.4em;;
         }
     
 
